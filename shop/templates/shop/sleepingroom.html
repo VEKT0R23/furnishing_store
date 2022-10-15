@@ -1,0 +1,55 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %} ЮМА-Мебель Спальни{% endblock %}
+
+{% block content %}
+    <div class="subhead">
+        <div class="done_block_empty"></div>
+        <div class="fyr_name"><h2 class="f_name">Спальни</h2></div>
+        <ol>
+            {% for record in records %}
+                <li>
+                    <div class="fyr_cards">
+                        <div><img src="{{ record.image.url }}" alt="" class="fyr_card_img"></div>
+                        <div class="fyr_card_dis"><h3>{{ record.description }}</h3></div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ol>
+        <footer>
+            <div class="hr">
+                <hr class="top_hr">
+            </div>
+            <div class="footer_cards">
+                <div class="footer_logo_block">
+                    <img class="logo_footer" src="{% static 'shop/img/logo.png' %}">
+                </div>
+                <div class="conf_acc">
+                    <a class="conf" href="/conf">Политика конфиденциальности</a>
+                    <a class="accept" href="/accept">Пользовательское соглашение</a>
+                </div>
+                <div class="work_schedule">
+                    <p class="work_sche">Работаем ежедневно <br> <br> <br>
+                        с 10:00 до 19:00 </p>
+                </div>
+            </div>
+            <div class="hr">
+                <hr class="bottom_hr">
+            </div>
+            <div class="end_footer">
+                <p>© «Юма-Мебель», 2009-2022
+
+                    Корпусная мебель от производителя в Великом Новгороде. <br> Изготовление мебели на заказ. <br>
+
+                    Все права защищены, любое копирование материалов запрещено.</p>
+            </div>
+        </footer>
+        <div class="sub_footer">
+            <a href="https://vk.com/id7296951" class="my_site">Создание сайтов</a>
+            <p class="my"> — Василий Катичев</p>
+        </div>
+        </body>
+    </div>
+
+
+{% endblock %}

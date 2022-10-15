@@ -1,0 +1,54 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %} ЮМА-Мебель Статьи{% endblock %}
+
+{% block content %}
+    <div class="subhead">
+        <div class="done_block_empty"></div>
+        <div class="fyr_name"><h2 class="f_name">Статьи</h2></div>
+        <ul>
+        <div class="blog_block">
+            {% for blog in blogs %}
+                    <li>
+                        <a href="{{ blog.get_url }}" class="blog_list"><h2 class="blog_list">{{ blog.title }}</h2></a>
+                    </li>
+            {% endfor %}
+        </div>
+        </ul>
+        <footer>
+            <div class="hr">
+                <hr class="top_hr">
+            </div>
+            <div class="footer_cards">
+                <div class="footer_logo_block">
+                    <img class="logo_footer" src="{% static 'shop/img/logo.png' %}">
+                </div>
+                <div class="conf_acc">
+                    <a class="conf" href="/conf">Политика конфиденциальности</a>
+                    <a class="accept" href="/accept">Пользовательское соглашение</a>
+                </div>
+                <div class="work_schedule">
+                    <p class="work_sche">Работаем ежедневно <br> <br> <br>
+                        с 10:00 до 19:00 </p>
+                </div>
+            </div>
+            <div class="hr">
+                <hr class="bottom_hr">
+            </div>
+            <div class="end_footer">
+                <p>© «Юма-Мебель», 2009-2022
+
+                    Корпусная мебель от производителя в Великом Новгороде. <br> Изготовление мебели на заказ. <br>
+
+                    Все права защищены, любое копирование материалов запрещено.</p>
+            </div>
+        </footer>
+        <div class="sub_footer">
+            <a href="https://vk.com/id7296951" class="my_site">Создание сайтов</a>
+            <p class="my"> — Василий Катичев</p>
+        </div>
+        </body>
+    </div>
+
+
+{% endblock %}
