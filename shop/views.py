@@ -22,7 +22,7 @@ class DoneView(TemplateView):
 #     form_class = GalleryUploadForm
 #     template_name = 'shop/load_file.html'
 #     success_url = 'load_image'
-# ,fhns,fhs
+# ,fhns,fhsпр
 
 
 class FeedBackView(CreateView):
