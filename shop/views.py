@@ -7,7 +7,6 @@ from .models import Feedback, ShopGallery, Kitchen, Wardrobe, SleepingRoom, Chil
 from .forms import FeedbackForm
 
 
-
 class ShopView(ListView):
     model = ShopGallery
     template_name = 'shop/list_shop.html'
@@ -23,6 +22,7 @@ class DoneView(TemplateView):
 #     form_class = GalleryUploadForm
 #     template_name = 'shop/load_file.html'
 #     success_url = 'load_image'
+# ,fhns,fhs
 
 
 class FeedBackView(CreateView):
@@ -82,6 +82,7 @@ class MaterialGallery(ListView):
     model = Material
     template_name = 'shop/material.html'
     context_object_name = 'records'
+
 
 class BlogGallery(ListView):
     template_name = 'shop/blog.html'
